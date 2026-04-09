@@ -62,11 +62,12 @@ Target variable: `class` (typology with age suffix, e.g., `"residential_1980"`).
 
 | Validation type | F1 (with age) | F1 (without age) |
 |----------------|---------------|------------------|
-| Test set (random split) | ~0.78 | ~0.90 |
+| Test set (random split) | ~0.73 | ~0.93 |
 | Stratified CV (random) | ~0.64 | ~0.83 |
-| Spatial CV (DBSCAN) | ~0.35 | ~0.68 (±0.06) |
+| Spatial CV (DBSCAN) | ~0.28 | ~0.67 (±0.25) |
 
-Global Moran's I on residuals: **-0.0206 (p=0.142)** → no significant spatial autocorrelation.
+Global Moran's I: 0.1426, expected: -0.0051, p-value: 0.0030
+Residuals show significant spatial autocorrelation. → significant spatial autocorrelation.
 
 
 ## From typology to economic valuation: local adaptation
