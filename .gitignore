@@ -17,7 +17,7 @@ data/*.csv
 results/
 *.pkl
 *.json
-*.png
+#*.png
 
 # IDE
 .vscode/
