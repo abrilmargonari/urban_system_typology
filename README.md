@@ -33,6 +33,18 @@ The model expects a **GeoPackage** (`.gpkg`) with the following 13 predictor var
 
 Target variable: `class` (typology with age suffix, e.g., `"residential_1980"`). The model also works with **7 typology classes without age**.
 
+### Typology classes (7 categories)
+
+| Label in model | Adapted classification (GEM‑PAGER) | Building use | Description |
+|----------------|-------------------------------------|--------------|-------------|
+| `r_l` | Low‑quality load‑bearing masonry | Residential low category | Unplastered walls, ceramic or concrete blocks. Poor maintenance. May include small‑scale commercial use. |
+| `r_m` | Medium‑quality load‑bearing masonry | Residential medium category | Plastered and painted walls, ceramic or concrete blocks. Average maintenance. May include small‑scale commercial use. |
+| `r_h` | High‑quality load‑bearing masonry | Residential high category | Plastered and painted walls, ceramic blocks, concrete blocks, or bricks. May include commercial or office use. |
+| `c3` | Reinforced concrete frame (≥3 floors) | Independent structure / mixed‑use | Masonry infill of ceramic or concrete blocks. Brick cladding. Institutional, commercial, office, or mixed‑use. |
+| `pi` | Metal roof, metal or ceramic block walls | Productive / industrial | Large sheds, silos. Productive, industrial, or grain storage use. |
+| `inf` | Precarious or non‑existent masonry | Informal residential | Metal or precarious roof coverings. No finishing. Residential use under informal conditions. |
+| `ext` | Large extractive structures | Extractive | Cranes, extensive land modifications, large sheds, logistic operations, treatment plants. Mining, oil, port facilities, bioethanol industry. |
+
 ## Workflow
 
 1. Load GeoPackage and extract coordinates.
@@ -69,6 +81,7 @@ Specific coefficients for heritage buildings, special investment zones, etc.
 The following steps illustrate how the predicted typology can be converted into a current built‑up valuation (e.g., for risk assessment or cadastral purposes). All numerical values in the table below are examples only; they must be replaced with locally validated figures.
 
 ## Workflow
+![Workflow from typology to economic valuation](workflow_diagram.png)
 
 Typology Prediction
         ↓
@@ -83,6 +96,7 @@ Age Category (decade) ← predicted by model
 Depreciation Factor ← local age‑depreciation curve
         ↓
 Current Built‑Up Valuation = Replacement Value × Depreciation Factor
+
 
 
 ## Indicative replacement costs (for illustration only)
